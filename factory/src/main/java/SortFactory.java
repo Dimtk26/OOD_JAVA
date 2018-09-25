@@ -24,12 +24,22 @@ public class SortFactory {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2, 5, 7, 8, 3, 0};
+        int[] arr0 = {2, 5, 7, 8, 3, 0, 2, 1, 7, 3, 5};
+        int[] arr1 = {4, 5, 9, 2, 3, 4, 7, 3, 1, 5, 4, 2, 2, 1, 4, 6, 0};
+        int[] arr2 = {1, 3, 5, 2, 6, 6, 4, 1, 2, 3, 4, 7, 2, 4, 5, 9, 5, 11, -1};
 
-        printArr(arr);
-       getSortByType("Pocket").sort(arr);
-
-        printArr(arr);
+        System.out.println("==============Пирамидальная сортирока==============");
+        printArr(arr0);
+       getSortByType("Pyramid").sort(arr0);
+        printArr(arr0);
+        System.out.println("================Карманная сортирока================");
+        printArr(arr1);
+        getSortByType("Pocket").sort(arr1);
+        printArr(arr1);
+        System.out.println("==================Сортирока Шелла==================");
+        printArr(arr2);
+        getSortByType("Shell").sort(arr2);
+        printArr(arr2);
     }
 }
 /*5/6/9*/

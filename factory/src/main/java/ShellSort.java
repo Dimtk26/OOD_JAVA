@@ -1,38 +1,26 @@
 public class ShellSort implements ISorting{
-        private int getMax(int arr[]) {
-            int max = arr[0];
-            for (int i = 1; i < arr.length; i++)
-                if (arr[i] > max)
-                    max = arr[i];
-            return max;
-        }
-
         public int[] sort(int arr[]) {
-            int divider = 1;
-            int mod = 10;
-            int[] output = new int[arr.length];
-            int maxDigits = String.valueOf(getMax(arr)).length();
-            for (int digit = 0; digit < maxDigits; digit++) {
-                int[] count = new int[10];
-                for (int i = 0; i < 10; i++) {
-                    count[i] = 0;
+            int increment = arr.length / 2;
+            while (increment >= 1) {
+                for (int startIndex = 0; startIndex < increment; startIndex++) {
+                    insertionSort(arr, startIndex, increment);
                 }
-                for (int anArr : arr) {
-                    int currentDigit = (anArr % mod) / divider;
-                    ++count[digit];
-                }
-                for (int i = 1; i < 10; i++)
-                    count[i] = count[i] + count[i - 1];
-                for (int i = arr.length - 1; i >= 0; i--) {
-                    int currentDigit = (arr[i] % mod) / divider;
-                    output[count[digit] - 1] = arr[i];
-                    count[digit]--;
-                }
-                System.arraycopy(output, 0, arr, 0, arr.length);
-                mod = mod * 10;
-                divider = divider * 10;
+                increment = increment / 2;
             }
-            return output;
+            return arr;
+        }
+    private void insertionSort (int[] arr, int startIndex, int increment) {
+        for (int i = startIndex; i < arr.length - 1; i = i + increment) {
+            for (int j = Math.min(i + increment, arr.length - 1); j - increment >= 0; j = j - increment) {
+                if (arr[j - increment] > arr[j]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j - increment];
+                    arr[j - increment] = tmp;
+                } else {
+                    break;
+                }
+            }
+        }
         }
 
 }
