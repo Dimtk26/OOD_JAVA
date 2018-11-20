@@ -1,8 +1,8 @@
 package components;
 
 
-/**
- * Одна из фишек автомобиля.
+/*
+  КПП - одна из частей автомобиля.
  */
 public enum Transmission {
     SINGLE_SPEED, MANUAL, AUTOMATIC, SEMI_AUTOMATIC

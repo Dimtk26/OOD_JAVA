@@ -7,17 +7,14 @@ import components.Transmission;
 import components.TripComputer;
 import components.Wheel;
 
-/**
- * Директор знает в какой последовательности заставлять работать строителя. Он
- * работает с ним через общий интерфейс Строителя. Из-за этого, он может не
- * знать какой конкретно продукт сейчас строится.
+/*Директор в заданной последовательности просит работать строителя через интерфейс(Builder).
  */
 public class Director {
 
     public void constructSportsCar(Builder builder) {
         builder.setType(Type.SPORTS_CAR);
         builder.setSeats(2);
-        builder.setEngine(new Engine(3.0, 0));
+        builder.setEngine(new Engine(4.0, 0));
         builder.setTransmission(Transmission.SEMI_AUTOMATIC);
         builder.setTripComputer(new TripComputer());
         builder.setWheel(Wheel.EXTREME_WHEELS);
@@ -26,7 +23,7 @@ public class Director {
     public void constructCityCar(Builder builder) {
         builder.setType(Type.CITY_CAR);
         builder.setSeats(5);
-        builder.setEngine(new Engine(1.2, 0));
+        builder.setEngine(new Engine(1.8, 0));
         builder.setTransmission(Transmission.AUTOMATIC);
         builder.setTripComputer(new TripComputer());
         builder.setWheel(Wheel.SUMMER_WHEELS);

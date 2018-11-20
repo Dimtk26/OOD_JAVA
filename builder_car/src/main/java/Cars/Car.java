@@ -5,9 +5,7 @@ import components.Transmission;
 import components.TripComputer;
 import components.Wheel;
 
-/**
- * Автомобиль — это класс продукта.
- */
+/* Сar —  класс продукта.*/
 public class Car {
     private final Type type;
     private final int seats;

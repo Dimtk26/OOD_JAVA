@@ -1,7 +1,7 @@
 package components;
 
-/**
- * Одна из фишек автомобиля.
+/*
+ Двигатель, одна из частей автомобиля.
  */
 public class Engine {
     private final double volume;
@@ -13,25 +13,12 @@ public class Engine {
         this.mileage = mileage;
     }
 
-    public void on() {
-        started = true;
-    }
-
-    public void of() {
-        started = false;
-    }
 
     public boolean isStarted() {
         return started;
     }
 
-    public void go(double mileage) {
-        if (started) {
-            this.mileage += mileage;
-        } else {
-            System.err.println("Cannot go(), you must start engine first!");
-        }
-    }
+
 
     public double getVolume() {
         return volume;

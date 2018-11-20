@@ -6,10 +6,7 @@ import components.Transmission;
 import components.TripComputer;
 import components.Wheel;
 
-/**
- * Интерфейс Строителя объявляет все возможные этапы и шаги конфигурации
- * продукта.
- */
+
 public interface Builder {
     void setType(Type type);
     void setSeats(int seats);

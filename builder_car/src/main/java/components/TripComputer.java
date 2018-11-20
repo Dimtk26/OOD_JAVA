@@ -3,8 +3,8 @@ package components;
 
 import Cars.Car;
 
-/**
- * Одна из фишек автомобиля.
+/*
+ Бортовой комп. - одна из частей автомобиля.
  */
 public class TripComputer {
 

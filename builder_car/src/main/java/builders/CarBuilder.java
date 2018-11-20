@@ -8,9 +8,7 @@ import components.Transmission;
 import components.TripComputer;
 import components.Wheel;
 
-/**
- * Конкретные строители реализуют шаги, объявленные в общем интерфейсе.
- */
+
 public class CarBuilder implements Builder {
     private Type type;
     private int seats;

@@ -6,10 +6,8 @@ import components.Transmission;
 import components.TripComputer;
 import components.Wheel;
 
-/**
- * Руководство автомобиля — это второй продукт. Заметьте, что руководство и сам
- * автомобиль не имеют общего родительского класса. По сути, они независимы.
- */
+/*Руководство автомобиля — это второй продукт. Первым является класс Car*/
+
 public class Manual {
     private final Type type;
     private final int seats;
