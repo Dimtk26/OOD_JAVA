@@ -1,4 +1,5 @@
 # OOD_JAVA
 
-#add Composite
-#add Flyweight
+# add Composite
+# add Flyweight
+# add Proxy
