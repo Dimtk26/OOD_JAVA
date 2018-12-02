@@ -4,3 +4,4 @@
 # add Flyweight
 # add Proxy
 # add Memento
+# add Observer
