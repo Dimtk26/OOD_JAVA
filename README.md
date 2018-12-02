@@ -3,3 +3,4 @@
 # add Composite
 # add Flyweight
 # add Proxy
+# add Memento
